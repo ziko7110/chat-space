@@ -1,24 +1,69 @@
-# README
+## groups_usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
-Things you may want to cover:
+### Association
+-  has_many :user_tags
+-  has_many :user_tag,through: :user_tags
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## users_idテーブル
 
-* Database initialization
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
-* How to run the test suite
+### Association
+-  has_many :user_tags
+-  has_many :user_tag,through: :user_tags
+-  has_many :imags  
+-  has_many :comments
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## users_tagテーブル
 
-* ...
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+
+-  belongs_to :users 
+-  belongs_to :groups_users
+
+
+
+
+
+## imagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|image|string|
+|user_id|integer|
+
+### Association
+- has_many :user
+- belongs_to :imags
+
+
+
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|comments|string
+|group_id|integer
+|group_id|integer
+
+### Association
+- has_many :user
+- belongs_to:comments
