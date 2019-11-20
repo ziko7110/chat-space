@@ -1,29 +1,34 @@
-## groups_usersテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
+|menber|string|null: false|
+|group_name|string|null: false|
+
 
 ### Association
--  has_many :user_tags
 -  has_many :user_tag,through: :user_tags
+-  has_many :ｍessages
 
 
 
 
-## users_idテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
+|user_name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+
 
 ### Association
--  has_many :user_tags
 -  has_many :user_tag,through: :user_tags
--  has_many :imags  
--  has_many :comments
+-  has_many :ｍessages
 
 
 ## users_tagテーブル
@@ -36,34 +41,19 @@
 ### Association
 
 -  belongs_to :users 
--  belongs_to :groups_users
+-  belongs_to :groups
 
 
 
-
-
-## imagesテーブル
+## ｍessagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|image|string|
-|user_id|integer|
+|comments|string|null: false|
+|group_id|integer|null: false|
+|group_id|integer|null: false|
+|image|string
 
 ### Association
 - has_many :user
-- belongs_to :imags
-
-
-
-
-## commentsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|comments|string
-|group_id|integer
-|group_id|integer
-
-### Association
-- has_many :user
-- belongs_to:comments
+- belongs_to:ｍessages
