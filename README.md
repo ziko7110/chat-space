@@ -8,6 +8,7 @@
 ### Association
 -  has_many :users,through: :users_tags
 -  has_many :ｍessages
+-  has_many :users_tags
 
 
 
@@ -22,16 +23,17 @@
 
 
 ### Association
--  has_many :user_tag,through: :user_tags
+-  has_many :has_many :groups,through: :user_tags
 -  has_many :ｍessages
+-  has_many :users_tags
 
 
 ## users_tagテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 
@@ -44,6 +46,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
+|user_id|string|null: false, foreign_key: true|
+|group_id|string|null: false, foreign_key: true|
 |comment|string
 |image|string
 
