@@ -2,14 +2,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|menber|string|null: false|
-|group_name|string|null: false|
+|name|string|null: false|
 
 
 ### Association
--  has_many :user_tag,through: :user_tags
+-  has_many :users,through: :users_tags
 -  has_many :ｍessages
 
 
@@ -19,9 +16,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-|user_name|string|null: false|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 
@@ -40,8 +35,8 @@
 
 ### Association
 
--  belongs_to :users 
--  belongs_to :groups
+-  belongs_to :user
+-  belongs_to :group
 
 
 
@@ -49,11 +44,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|comments|string|null: false|
-|group_id|integer|null: false|
-|group_id|integer|null: false|
+|comment|string
 |image|string
 
 ### Association
-- has_many :user
-- belongs_to:ｍessages
+- belongs_to:user
+- belongs_to:group
