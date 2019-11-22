@@ -1,0 +1,17 @@
+.chat-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name フロント実装マン
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__btn
+          =link_to "#", class: "btn"  do
+            = icon'fas fa-edit',class: 'btn'
+        %li.side-header__box__menu__btn2
+          =link_to "#", class: "btn2"  do
+            =icon'fas fa-cog',class: 'btn2'
+  .groups
+    .a
+      .group
+        .group__name 
+        .group__message
+        
