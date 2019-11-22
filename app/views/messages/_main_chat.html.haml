@@ -4,32 +4,23 @@
       .main-header__left-box__current-group 
         .main-header__left-box__menber-list 
           .main-header__left-box__member-list__member
- 
-    %a{:href => "/groups/6320/edit"}
+    =link_to "#", class: "a"  do
       .main-header__edit-btn Edit
      
-
-
-
   .messages
-    .massege
+    .message
       .message__upper-info
         .message__upper-info__talker ユーザー名
         .message__upper-info__date 2019/11/21(Thu) 20:07:09
       .message__text こんにちわ
-
-
-
-
   .form
     .new_message
       .input-box
-        %input.input-box__text{:name => "message", :placeholder => "type a message", :type => "text", :value => ""}/
+        %input.input-box__text{name: "message", placeholder: "type a message", :type => "text", :value => ""}/
         .input-box__image
           =icon'fas fa-images',class: 'fa-images'
 
       %input.submit-btn{:name => "commit", :placeholder => "send", :type => "submit", :value => "send"}/
 
-            
 
 
