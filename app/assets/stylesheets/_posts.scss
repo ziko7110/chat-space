@@ -18,7 +18,7 @@
         display: flex;
         &__btn {
           margin-left: 0.3rem;
-          .btn {
+          .btn2 {
              color: #FFFFFF;
             font-size: 16px;
           }
@@ -100,7 +100,7 @@
     float: left;
 }
   .messages {
-    height: calc(100vh - 280px);
+    height: calc(100vh - 263px);
     padding: 46px 40px;
     background-color: #fafafa;
     overflow: scroll;
@@ -131,58 +131,53 @@
 
 // フォーム作成
 
-
 .form {
-    height: 65px;
-    padding: 20px 40px;
-    background-color: #ddd;
-}
-.new_message {
-  display: flex;
-}
-
-
-.input-box {
-  position: relative;
-  width: 100%;
-
-
-    &__text {
+  background-color: #DDDDDD;
+  box-sizing: border-box;
+  height: 90px;
+  padding: 20px 50px 20px 40px;
+  &__message {
+    border: none;
+    float: left;
     height: 50px;
-    width: 95%;
-    padding: 0 40px 0 10px;
-    color: #434a54;
-    border-style: none;
-    background-color:#FFFFFF;
-    font-size:16px;
+    width: calc(100% - 150px);
   }
-
+  &__mask {
+    background-color: #FFFFFF;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
     &__image {
-    font-size: 1.3rem;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+      font-size: 20px;
+      line-height: 50px;
+    }
+    .hidden {
+      display: none;
+    }
   }
-  &__image__file {
-    display: none;
+  &__submit {
+    background-color: #38aef0;
+    border: none;
+    color: #FFFFFF;
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
   }
 }
-.fa-image {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  &:before {
-    color:black;
-  }
+
+.main-header__left-box__member-list__member {
+  display: flex;
+  font-size: 12px;
+  color: #999999;
 }
-.submit-btn {
-  width: 100px;
-  height: 50px;
-  padding: 0 30px;
-  margin-left: 15px;
-  background-color: #38aef0;
+
+.fa-edit:before {
+  content: "";
   color: white;
-  cursor: pointer;
+}
+.fa-cog:before {
+  content: "";
+  color: white;
 }
