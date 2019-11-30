@@ -69,7 +69,6 @@ console.log(message.name)
 
 
       .done(function(messages){
-        console.log("帰ってきてる")
         var insertHTML = '';
         messages.forEach(function (message) {
           insertHTML = buildHTML(message); 
