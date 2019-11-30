@@ -3,7 +3,6 @@ $(function(){
 
 
       var addImage = (message.image !== null) ? `<img class = "lower-message__image", src="${message.image}">` :''
-console.log(message.name)
       var html = `<div class="message" data-message-id=${message.id}>
         <div class="upper-message">
         <div class="upper-message__user-name">
