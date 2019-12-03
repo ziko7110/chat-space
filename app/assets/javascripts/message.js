@@ -43,12 +43,13 @@ $(function(){
         var html = buildHTML(message);
         $('.messages').append(html);
         $('form')[0].reset();
-        $('.form__submit').prop('disabled', false);
+        $(".form__submit").removeAttr("disabled");
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
 
       })
       .fail(function(massege){
         alert('メッセージを入力してください');
+        $(".form__submit").removeAttr("disabled");
       })
   })
 
